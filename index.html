@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenda (XML) — Contacts</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Contacts Agenda</h1>
+    <div class="actions">
+      <input id="search" placeholder="Search name, phone, email..." />
+      <button id="btnAdd">Add</button>
+      <button id="btnImport">Import</button>
+      <button id="btnExport">Export</button>
+      <input id="fileImport" type="file" accept="text/xml,application/xml" style="display:none" />
+    </div>
+  </header>
+
+  <main>
+    <ul id="list" class="contact-list"></ul>
+    <div id="empty" class="empty">No contacts yet. Tap Add to create one.</div>
+  </main>
+
+  <!-- Modal / Form -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-panel">
+      <h2 id="formTitle">Add Contact</h2>
+      <form id="contactForm">
+        <input type="hidden" id="contactId" />
+        <label>Name<input id="name" required /></label>
+        <label>Address<input id="address" /></label>
+        <label>Email<input id="email" type="email" /></label>
+        <label>Phone<input id="phone" /></label>
+        <label>Birthdate<input id="birthdate" type="date" /></label>
+        <label>Sex
+          <select id="sex">
+            <option value="">(unknown)</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+          </select>
+        </label>
+        <label>Picture<input id="pictureFile" type="file" accept="image/*" /></label>
+        <div class="preview">
+          <img id="picturePreview" src="" alt="" />
+          <button id="clearPicture" type="button">Clear</button>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="save">Save</button>
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="delete" class="danger">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>git remote add origin https://github.com/USERNAME/REPO.git
+git branch -M main
+git push -u origin main

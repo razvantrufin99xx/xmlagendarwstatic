@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<agenda>
+  <contact id="1">
+    <name>John Doe</name>
+    <address>123 Main St</address>
+    <email>john@example.com</email>
+    <phone>+1 555 1234</phone>
+    <picture></picture>
+    <birthdate>1980-05-12</birthdate>
+    <sex>M</sex>
+  </contact>
+</agenda>

@@ -1,0 +1,31 @@
+/* Basic mobile-friendly styles */
+:root{--accent:#0b79d0;--danger:#d03030;background:#f6f8fb}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;margin:0;background:var(--background,#fff);color:#222}
+header{background:var(--accent);color:#fff;padding:12px;display:flex;align-items:center;justify-content:space-between}
+header h1{font-size:1.1rem;margin:0}
+header .actions{display:flex;gap:6px;align-items:center}
+header input#search{padding:6px;border-radius:6px;border:none;min-width:160px}
+header button{background:#fff;color:var(--accent);border:none;padding:8px 10px;border-radius:6px;cursor:pointer}
+main{padding:12px}
+.contact-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.contact-item{background:#fff;border:1px solid #e3e6ea;padding:10px;border-radius:8px;display:flex;gap:10px;align-items:center}
+.contact-item img{width:64px;height:64px;border-radius:6px;object-fit:cover}
+.contact-info{flex:1}
+.contact-name{font-weight:600}
+.contact-meta{font-size:0.9rem;color:#555}
+.empty{color:#666;text-align:center;margin-top:36px}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;padding:12px}
+.modal.hidden{display:none}
+.modal-panel{background:#fff;padding:12px;border-radius:8px;max-width:480px;width:100%;box-shadow:0 6px 18px rgba(0,0,0,0.2)}
+.modal-panel h2{margin-top:0}
+.modal-panel form{display:grid;gap:8px}
+.modal-panel label{display:flex;flex-direction:column;font-size:0.9rem}
+.modal-panel input, .modal-panel select{padding:8px;border:1px solid #ddd;border-radius:6px}
+.preview{display:flex;gap:8px;align-items:center}
+.preview img{width:80px;height:80px;object-fit:cover;border:1px solid #eee;border-radius:6px}
+.form-actions{display:flex;gap:8px;justify-content:flex-end}
+button.danger{background:var(--danger);color:#fff}
+@media (max-width:420px){.contact-list{grid-template-columns:1fr}}
